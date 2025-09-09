@@ -18,7 +18,49 @@
 
 </head>
 <body>
-    <header>
+  <header>
+  <div class="navbar bg-[#15803d] text-white shadow-sm px-4">
+    
+    <!-- Navbar Start -->
+    <div class="navbar-start">
+      <!-- Mobile Dropdown -->
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-white rounded-box z-10 mt-3 w-52 p-2 shadow text-black">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Plant a Tree</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo / Text -->
+      <a class="text-xl font-bold">Green Earth</a>
+    </div>
+
+    <!-- Navbar Center (Desktop Menu) -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Plant a Tree</a></li>
+      </ul>
+    </div>
+
+    <!-- Navbar End -->
+    <div class="navbar-end">
+      <a href="#" class="btn bg-[#FACC15] text-black rounded-3xl">Plant a Tree</a>
+    </div>
+
+  </div>
+</header>
+
+
+
+    <!-- <header> 
         <div class="navbar bg-[#15803d] bg-base-100 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -51,7 +93,7 @@
     <a class="btn bg-[#FACC15] rounded-3xl">Plant a Tree</a>
   </div>
 </div>
-    </header>
+    </header> -->
     
     <section>
      <div class="hero bg-[#CFF0DC] text-white pt-10 pb-0">
@@ -80,12 +122,53 @@
   </div>
   </div>
     </section>
-   
-<section class="bg-[#f0fdf4]">
+   <section class="bg-[#f0fdf4]">
+ <div class="container">
+    <div class="header">
+      <h1>Choose Your Trees</h1>
+    </div>
 
+    <!-- LEFT: categories -->
+    <aside class="categories" aria-label="categories">
+      <ul class="cat-list" id="categories">
+        <li class="active" data-filter="all">All Trees</li>
+        <li data-filter="fruit">Fruit Trees</li>
+        <li data-filter="flower">Flowering Trees</li>
+        <li data-filter="shade">Shade Trees</li>
+        <li data-filter="medicinal">Medicinal Trees</li>
+        <li data-filter="timber">Timber Trees</li>
+        <li data-filter="evergreen">Evergreen Trees</li>
+        <li data-filter="ornamental">Ornamental Plants</li>
+        <li data-filter="bamboo">Bamboo</li>
+        <li data-filter="climbers">Climbers</li>
+        <li data-filter="aquatic">Aquatic Plants</li>
+      </ul>
+    </aside>
+
+    <!-- CENTER: product grid -->
+    <main>
+      <div class="products" id="product-grid">
+        <!-- JS দিয়ে প্রোডাক্ট আসবে -->
+      </div>
+    </main>
+
+    <!-- RIGHT: cart -->
+    <aside class="cart" aria-label="your cart">
+      <h4>Your Cart</h4>
+      <div class="cart-items" id="cart-items">
+        <div style="color:#889; font-size:13px">No items yet</div>
+      </div>
+      <div class="cart-footer">
+        <div style="font-size:14px">Total:</div>
+        <div class="total" id="cart-total">৳0</div>
+      </div>
+    </aside>
+  </div> 
 
 <!-- maj kane kaj baki -->
 </section>
+
+
 <section class="py-10">
   <h2 class="font-bold text-black text-center text-2xl mb-8">
     About the Campaign
@@ -186,11 +269,4 @@
 </body>
 </html> 
 
-  <!-- div.innerHTML = `
-      <img src="" alt="">
-      <h4 onclick="openModal(${p.id})">${p.name}</h4>
-      <p>A fast-growing tropical tree that produces delicious fruits.</p>
-      <span class="tag">${p.type}</span>
-      <p><strong>৳${p.price}</strong></p>
-      <button onclick="addToCart(${p.id})">Add to Cart</button>
-    `; -->
+  
